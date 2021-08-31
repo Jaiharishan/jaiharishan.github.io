@@ -117,4 +117,40 @@ $btn-padding-x-lg: 20px;
 }
 
 
+// card flip style
+.face {
+    transition: 1s;
+}
+
+.back-face {
+    display: none;
+}
+
+.face:hover {
+    -webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+    -moz-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+    -ms-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+    -o-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+    transform:  rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+}
+
+.front-face {
+    transition: 1s;
+}
+
+
+.face:hover .front-face {
+    display: none;
+
+}
+
+.face:hover .back-face {
+    display: flex;
+    width: 202px;
+    height: 258px;
+    transform:  rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateX(0px) translateZ(0px);
+
+}
+
+
 @import '../node_modules/bootstrap/scss/bootstrap';
