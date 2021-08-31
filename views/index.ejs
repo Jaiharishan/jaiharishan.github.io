@@ -266,7 +266,7 @@
 
 
 <!-- projects section -->
-<section class="p-5" id='projects'>
+<section class="py-5 px-sm-5" id='projects'>
     <div class="container px-sm-5 d-flex flex-column align-items-center">
         <div class="text-light text-center header-style pb-2 display-6 mb-5">
             Projects
@@ -330,10 +330,54 @@
 
 
 
-
 <!-- some other section -->
 
+
+
 <!-- footer section -->
+<section class="p-5" id="contact">
+    <div class="container px-sm-5 d-flex flex-column align-items-center">
+        <div class="text-light text-center header-style pb-2 display-6 mb-5">
+            Contacts
+        </div>
+
+        <div class="d-flex flex-wrap align-items-center justify-content-center w-100">
+            <div class="contact-form">
+                <form class="d-flex align-items-center flex-column p-3" style="border: 1px solid rgb(65, 65, 65); border-radius: 1rem; min-width: 300px;">
+                    <div class="mb-3 w-100">
+                        <label for="name" class="form-label text-light">Name</label>
+                        <input type="name" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3 w-100">
+                        <label for="email" class="form-label text-light">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <label for="textare" class="form-label text-light align-self-start">Thoughts</label>
+                    <div class="mb-3">
+                        <textarea name="textarea" class="form-control" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="maps d-flex align-items-center justify-content-center m-3">
+                <div id="map" style="width: 500px; height: 400px; min-width: 200px; min-height: 160px;"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamFpaGFyaXNoYW4iLCJhIjoiY2txb3Ewem9tMDlucDJ1cWFmdTRlcTM5eiJ9.n4yMwyTY1HQF5hlK8MXwOg';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [80.220390, 13.095650],
+    zoom: 10
+    });
+</script>
 
 
 
