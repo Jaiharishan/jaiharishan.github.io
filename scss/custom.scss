@@ -157,4 +157,8 @@ $btn-padding-x-lg: 20px;
     height:100%;
 }
 
+.proj-img {
+    min-width: 250px;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';
