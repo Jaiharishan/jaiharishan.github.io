@@ -2,6 +2,7 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 
 const app = express();
+const path = require('path');
 
 
 app.use(expressLayouts);
@@ -13,7 +14,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.sendFile(path.join(__dirname+'/index.html'))
 })
 
 const PORT = process.env.PORT || 4000;
